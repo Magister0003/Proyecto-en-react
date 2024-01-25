@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';  // Importa el archivo de estilo de Bootstrap
+import Navbar from './navbar';  // Asegúrate de que el nombre del archivo y del componente comience con mayúscula
+import Fondo from './fondo';
+import Certificacones from './certificaciones';
+import About from './about';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Fondo />
+      <Certificacones/>
+      <About />
     </div>
   );
 }
 
 export default App;
+
+
