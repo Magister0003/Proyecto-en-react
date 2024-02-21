@@ -1,4 +1,5 @@
-import fondo from './assets/image/fondo.mp4';
+import fondo from '../assets/image/fondo.mp4';
+import '../css/index.css';
 import React, { Component } from 'react';
 
 
@@ -33,17 +34,17 @@ class Fondo extends Component {
           <div className="carousel-inner">
             <div className="carousel-item active">
               {/* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta real de tu imagen */}
-              <video className="w-100 h-25" autoPlay loop muted>
-                <source src={fondo} type="video/mp4" />
+              <video className='video' autoPlay loop muted>
+                <source src={fondo} type="video/mp4"></source>
           
               </video>
               <div className="carousel-caption">
                 <div className="container">
                   <div className="row justify-content-start">
                     <div className="col-lg-7 text-start">
-                      <p className="fs-2 text-white animated slideInRight">Bienvenido Soy <strong>Denyer Bastidas</strong>
+                      <p className="fs-2 text-white animated slideInRight">Bienvenido Soy <strong style={{color: '#e51a4c'}}>Denyer Bastidas</strong>
                       </p>
-                      <h1 className="display-2 mb-4 animated text-secondary slideInRight">Soy <span>{this.state.textoCambiante}</span></h1>
+                      <h1 className="display-2 mb-4 animated  slideInRight" style={{color: '#e51a4c'}}>Soy <span>{this.state.textoCambiante}</span></h1>
                     </div>
                   </div>
                 </div>

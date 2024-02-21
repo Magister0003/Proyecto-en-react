@@ -1,9 +1,15 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';  // Importa el archivo de estilo de Bootstrap
-import Navbar from './navbar';  // Asegúrate de que el nombre del archivo y del componente comience con mayúscula
-import Fondo from './fondo';
-import Certificacones from './certificaciones';
-import About from './about';
+import React from 'react'; // Importa el archivo de estilo de Bootstrap
+import Navbar from './component/navbar';  // Asegúrate de que el nombre del archivo y del componente comience con mayúscula
+import Fondo from './component/fondo';
+import Certificacones from './component/certificaciones';
+import About from './component/about';
+import Portafolios from './component/portafolios'
+import Proyectos from './component/proyectos'
+import Contacto from './component/contacto';
+import Footer from './component/footer';
+import Copy from './component/copyright';
+
+
 
 function App() {
   return (
@@ -12,6 +18,12 @@ function App() {
       <Fondo />
       <Certificacones/>
       <About />
+      <Portafolios />
+      <Proyectos />
+      <Contacto />
+      <Footer/>
+      <Copy/>
+      
     </div>
   );
 }

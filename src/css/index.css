@@ -1,14 +1,188 @@
 /********** Template CSS **********/
 :root {
-    --primary:  #e51a4c; 
+    --primary:  #e51a4c;
+    --bor: linear-gradient(#00ccff, #0e1538, #0e1538, var(--primary)) !important;
+     
     --secondary: #555555;
     --light: #f6faf1;
-    --dark: #1C2035;
+    --dark: #212529;
+        --bs-blue: rgb(13, 75, 133);
+        --bs-indigo: rgb(13, 75, 133);
+        --bs-purple: #6f42c1;
+        --bs-pink: #d63384;
+        --bs-red: #dc3545;
+        --bs-orange: #fd7e14;
+        --bs-yellow: #ffc107;
+        --bs-green: #198754;
+        --bs-teal: #20c997;
+        --bs-cyan: #0dcaf0;
+        --bs-white: #fff;
+        --bs-gray: #6c757d;
+        --bs-gray-dark: #343a40;
+        --bs-primary: #e51a4c; 
+        --bs-secondary: #212529;
+        --bs-success: #198754;
+        --bs-info: #0dcaf0;
+        --bs-warning: #ffc107;
+        --bs-danger: #dc3545;
+        --bs-light: #F1F3FA;
+        --bs-dark: #212529;
+        --x: 45deg;
+    
+}
+
+.btn3{
+    position: relative;
+    text-decoration: none;
+    color: #fff !important;
+    text-indent: 10px;
+    z-index: 2;
+    
+}
+
+.btn-3{
+    transition: all 0.6s ease;
+    color: white;
+    
+}
+
+.btn-3::after{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 110%;
+    left: -10%;
+    top: 0;
+    transform: skew(20deg, 0deg);
+    z-index: -1;
+    transition: all 0.4s ease;
+
+}
+
+.btn-3::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px !important;
+    color: white !important;
+    border: 1px solid #e51a4c;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-3:hover::after{
+    background-color: #ffffff31;
+    transform: skew(20deg, 0deg) translateX(240px);
+    color: white !important;
+}
+
+.btn-3:hover::before{
+    background-color: #e51a4c;
+    border: 3px solid #e51a4c;
+    color: white !important;
+    
+}
+
+
+.justify-items-center{
+    justify-items: center;
+}
+
+.boder{
+    border: 1px solid var(--primary);
+}
+
+.t{
+    text-decoration: none !important;
+}
+
+a span{
+    color: var(--dark) !important;
+}
+
+.form-floating label{
+    color: var(--light) !important;
+}
+
+.form-control~label::after ,.form-select~label::after {
+    background-color: transparent !important;
+}
+
+.form-control,
+.form-select
+{
+    background-color: var(--dark) !important;
+    color: var(--light) !important;
+    border-color: var(--primary) !important;
+}
+
+.form-control:focus, .form-select:focus{
+    border-color: var(--primary) !important;
+    box-shadow: none !important;
+}
+
+.icon{
+    width: 10rem!important;
+    height: 10rem!important;
+}
+
+.carousel .btn-square:nth-child(3) .icon {
+    width: 6rem!important;
+    height: 6rem!important;
+  }
+  
+.te-primary{
+    color: var(--primary)!important;
+}
+
+
+.primary{
+    background-color: var(--primary)!important;
+}
+
+.secondary{
+    background-color: var(--secondary)!important;
+}
+
+.fondo-bg{
+    background-color: var(--bs-dark)!important;
+}
+
+.nav-height{
+    max-height: 70px;
+}
+
+.bor{
+    border-radius: 5px;
+}
+
+
+body{
+    background-color: var(--bs-dark)!important;
+}
+
+@media (min-width: 769px) and (max-width: 2456px){
+nav .bg-dark:last-child{
+    background-color: transparent!important;
+}
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    nav .bg-dark:last-child{
+        background-color: #212529!important;
+    }
+}
+
+.text-primary{
+    color: var(--primary) !important;
 }
 
 .logo-db{
-    width: 70px;
-    height: 70px; 
+    width: 90px;
+    height: 90px; 
     background-Color: var(--primary); 
     color: #FFF; 
     display: flex; 
@@ -16,6 +190,19 @@
     justify-Content: center; 
     font-Size: 30px; 
     font-Weight: bold; 
+}
+
+.logo-db2{
+    width: 40px;
+    height: 40px; 
+    background-Color: var(--primary); 
+    color: #FFF; 
+    display: flex; 
+    align-Items: center; 
+    justify-Content: center; 
+    font-Size: 20px; 
+    font-Weight: bold;
+    margin: 2px; 
 }
 
 .navbar .navbar-nav .nav-link {
@@ -61,13 +248,15 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
 
 /*** Button ***/
 .btn {
-    transition: .5s;
+    transform: 5deg;
     font-weight: 500;
 }
 
 .btn-primary,
 .btn-outline-primary:hover {
-    color: var(--light);
+    
+    background-color: var(--white)!important;
+    border: 1px solid var(--primary)!important;
 }
 
 .btn-secondary,
@@ -100,7 +289,6 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     font-weight: normal;
 }
 
-
 /*** Navbar ***/
 .sticky-top {
     top: -100px;
@@ -116,7 +304,7 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
 
 
 @media (min-width: 320px) and (max-width: 768px){
-    .navbar-nav img{
+    .navbar-nav .overflow-hidden{
         display: none;
     }
 }
@@ -129,7 +317,6 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     font-weight: 500;
     outline: none;
 }
-
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
     color:  #e51a4c;
@@ -184,32 +371,21 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     bottom: 0;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, .1);
     z-index: 1;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
+.video{
+    width: 100%;
+    height: 100%;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 3.5rem;
-    background-color:  #e51a4c;
-    border: 15px solid  #e51a4c;
-    opacity: 0.5;
-}
-
-@media (max-width: 768px) {
+@media (min-width: 300px) and (max-width: 768px) {
     #header-carousel .carousel-item {
         position: relative;
         min-height: 450px;
     }
     
-    #header-carousel .carousel-item img {
+    #header-carousel .carousel-item video {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -248,6 +424,22 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
     
     background-size: cover;
 }
+
+.video-background {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para ajustar el video al tamaño del contenedor */
+    z-index: -1; /* Para colocar el video detrás del contenido */
+  }
+  
 
 .btn-play {
     position: relative;
@@ -343,21 +535,37 @@ h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6 {
 
 
 /*** Service ***/
+
+
 .service-item .service-text {
     position: relative;
+    background-color: var(--dark);
     width: 100%;
     height: 500px;
     top: 0;
     left: 0;
     text-align: center;
+    border: var(--primary) 1px solid;
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
     transition: .5s;
     z-index: 2;
     color: white;
 }
 
+@media (width: 1024px) {
+    .service-item .service-text {
+    height: 600px;
+    }
+}
+
+@media (min-width: 319px) and (max-width: 376px) {
+    .service-item .service-text {
+    height: 700px;
+    }
+}
+
 .service-text p{
-    text-align: start;
+    text-align: justify;
 }
 
 .service-item .service-text h5{

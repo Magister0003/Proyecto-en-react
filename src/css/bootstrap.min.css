@@ -2540,7 +2540,7 @@ textarea.form-control-lg {
 }
 
 .form-floating>.form-control::placeholder {
-    color: transparent
+    color: transparent;
 }
 
 .form-floating>.form-control:focus,.form-floating>.form-control:not(:placeholder-shown) {
@@ -4245,11 +4245,13 @@ textarea.form-control-lg {
 
 .navbar-expand .navbar-collapse {
     display: flex !important;
+    
     flex-basis: auto
 }
 
 .navbar-expand .navbar-toggler {
     display: none
+    
 }
 
 .navbar-light .navbar-brand {
@@ -7625,6 +7627,7 @@ textarea.form-control-lg {
 }
 
 .fs-5 {
+    
     font-size: 1.25rem !important
 }
 
